@@ -1,5 +1,10 @@
 #include <iostream>
-#include "problem1.h"
+
+const int fives = 199;
+const int threes = 333;
+int mulFive[fives];
+int mulThree[threes];
+int sum = 0;
 
 #define false 0;
 #define true 1;
