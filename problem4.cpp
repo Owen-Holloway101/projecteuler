@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <iostream>
 
 std::string intToString(int input) { 
 	//Converts intgers to strings using <sstream>
