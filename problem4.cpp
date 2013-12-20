@@ -32,33 +32,23 @@ int reverseInt(int input) {
 	return result;
 }
 
+int palindrome[1000];
+int currentPalindromes = 0;
+
 int main() {
 
-	bool palindrome = false;
-	int high1 = 999;
-	int high2 = 999;
+	for (int i = 900; i < 999; ++i) {
+		for (int j = 900; j < 999; ++j) {
+			int testNo = i * j;
+			int testNoReverse = reverseInt(testNo);
+			if (testNo == testNoReverse) {
 
-	while (!palindrome) {
-
-		int testInt = high1 * high2;
-		int testIntReverse = reverseInt(testInt);
-		if (testInt == testIntReverse) {
-			std::cout << testInt << std::endl;
-			std::cout << testIntReverse << std::endl;
-			palindrome = true;
+				palindrome[currentPalindromes] = testNo;
+				currentPalindromes++;
+				std::cout << "palindrome: " << testNo << std::endl;
+				
+			}
 		}
-		high2--;
-		
-		testInt = high1 * high2;
-		testIntReverse = reverseInt(testInt);
-
-		if (testInt == testIntReverse) {
-			std::cout << testInt << std::endl;
-			std::cout << testIntReverse << std::endl;
-			palindrome = true;
-		}
-		high1--;
-
 	}
 
 	return 0;
