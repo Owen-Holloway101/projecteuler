@@ -38,5 +38,7 @@ int main() {
 
 	//Prime generation ######################################################
 
+	std::cout << "10001st prime: " << prime[10000] << " :10001st prime" << std::endl;
+
 	return 0;
 }
