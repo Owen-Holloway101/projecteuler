@@ -3,6 +3,8 @@
 const int startNo = 20; 
 
 int main() {
+
+	//std::cout << "This is a test" << " well all I can say is this thing feels amazing! and types really fast!" << std::endl;
 	
 	bool isDivisable =  false;
 	long int testNo = startNo;
