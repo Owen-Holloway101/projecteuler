@@ -1,10 +1,10 @@
-int prime[100000];
+long int prime[100000];
 
-int primeGen(int primesBelow) {
+void primeGen(long int primesBelow) {
 	//Prime generation ######################################################
 
-	int testNo;
-	int currentPrime;
+	long int testNo = 3;
+	long int currentPrime = 1;
 
 	prime[0] = 2; //2 is the first prime as all other primes will come after
 
@@ -21,11 +21,13 @@ int primeGen(int primesBelow) {
 			prime[currentPrime] = testNo;
 			currentPrime++;
 			//std::cout << "Primes: " << currentPrime << std::endl;
-			std::cout << "Prime: " << testNo << std::endl;
+			//std::cout << "Prime: " << testNo << std::endl;
 		}
 
 		testNo++;
 	}
+
+	std::cout << "Primes below: " << primesBelow << " found" << std::endl;
 
 	//Prime generation ######################################################
 }
